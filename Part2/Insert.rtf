@@ -1,0 +1,197 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.10586}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 -- -----------------------------------------------------\par
+-- Data for table `db_news`.`author`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (1, 'Artem', 'Lomako', '+380 63 9782416');\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (2, 'Leonid ', 'Stepanenko', '+380 93 5152514');\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (3, 'Ilona', 'Shabelnik', '+380 63 4750757');\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (4, 'Andrey ', 'Lyahuta', '+380 50 7256543');\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (5, 'Andrey', 'Sherstuk', '+380 63 1480067');\par
+INSERT INTO `db_news`.`author` (`id`, `name`, `surname`, `info`) VALUES (6, 'Natalia', 'Sarapina', '+380 93 7187213');\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`heading`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (1, '\\"sport\\"', DEFAULT);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (2, '\\"weather\\"', DEFAULT);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (3, '\\"business\\"', DEFAULT);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (4, '\\"show biz\\"', DEFAULT);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (5, '\\"science\\"', DEFAULT);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (6, '\\"football\\"', 1);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (7, '\\"basketball\\"', 1);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (8, '\\"hockey\\"', 1);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (9, '\\"forbes\\"', 3);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (10, '\\"oscar\\"', 4);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (11, '\\"celebrities\\"', 4);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (12, '\\"cyclone\\"', 2);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (13, '\\"storm\\"', 2);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (14, '\\"nuclear\\"', 5);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (15, '\\"math\\"', 5);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (16, '\\"space\\"', 5);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (17, '\\"robotics\\"', 5);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (18, '\\"currency\\"', 3);\par
+INSERT INTO `db_news`.`heading` (`id`, `name`, `parent_id`) VALUES (19, '\\"it\\"', 5);\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`news`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (1, '\\"Football news 1\\"', '\\"body Football news 1\\"', 1, 6, '21.04.2014');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (2, '\\"Football news 2\\"', '\\"body Football news 2\\"', 3, 6, '20.11.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (3, '\\"Hockey news 1\\"', '\\"body Hockey news 1\\"', 3, 8, '12.03.2014');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (4, '\\"Hockey news 2\\"', '\\"body Hockey news 2\\"', 2, 8, '21.01.2016');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (5, '\\"Hockey news 3\\"', '\\"body Hockey news 3\\"', 2, 8, '2.02.2014');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (6, '\\"Space news 1\\"', '\\"body Space news 1\\"', 4, 16, '5.05.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (7, '\\"Space news 2\\"', '\\"body Space news 2\\"', 5, 16, '11.12.2013');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (8, '\\"Oscar news 1\\"', '\\"body Oscar news 1\\"', 1, 10, '18.01.2016');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (9, '\\"Robotics news 1\\"', '\\"body Robotics news 1\\"', 4, 17, '11.04.2014');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (10, '\\"Basketball news1\\"', '\\"body Basketball news 1\\"', 1, 7, '13.12.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (11, '\\"Celebrities news 1\\"', '\\"body Celebrities news 1\\"', 3, 11, '1.05.2013');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (12, '\\"Celebrities news 2\\"', '\\"body Celebrities news 2\\"', 1, 11, '6.09.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (13, '\\"Storm news 1\\"', '\\"body Storm news 1\\"', 6, 13, '19.12.2013');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (14, '\\"Storm news 2\\"', '\\"body Storm news 2\\"', 5, 13, '15.02.2016');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (15, '\\"Cyclone news 1\\"', '\\"body Cyclone news 1\\"', 2, 12, '21.08.2013');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (16, '\\"Cyclone news 2\\"', '\\"body Cyclone news 2\\"', 1, 12, '18.11.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (17, '\\"Currency news 1\\"', '\\"body Currency  news 1\\"', 5, 18, '25.12.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (18, '\\"Currency  news 2\\"', '\\"body Currency  news 2\\"', 4, 18, '29.01.2014');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (19, '\\"Nuclear  news 1\\"', '\\"body Nuclear  news 1\\"', 2, 14, '20.05.2015');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (20, '\\"Nuclear  news 2\\"', '\\"body Nuclear  news 2\\"', 6, 14, '22.11.2013');\par
+INSERT INTO `db_news`.`news` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (DEFAULT, DEFAULT, DEFAULT, , DEFAULT, DEFAULT);\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`review`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (1, '\\"New Smartpone review\\"', '\\"Iphone 10s review\\"', 2, 5, '20.11.2015');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (2, '\\"Arsenal MU review\\"', '\\"Football match review 1 \\"', 1, 6, '12.08.2015');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (3, '\\"Dynamo Shahtar review\\"', '\\"Football match review 2 \\"', 1, 6, '15.08.2015');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (4, '\\"New star opening\\"', '\\"Space  review 1 \\"', 3, 16, '12.11.2014');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (5, '\\"New nuclear station\\"', '\\"New nuclear station opening\\"', 5, 14, '21.02.2015');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (6, '\\"New Orlean vs Bulls\\"', '\\"Basketball match review 1 \\"', 2, 7, '12.05.2014');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (7, '\\"Di Caprio Oscar\\"', '\\"Leonardo Di Caprio life style \\"', 3, 10, '05.02.2016');\par
+INSERT INTO `db_news`.`review` (`id`, `name`, `text`, `author_id`, `heading_id`, `publication_date`) VALUES (8, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT);\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`tags`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (1, '\\"smartphone\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (2, '\\"space\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (3, '\\"cinema\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (4, '\\"fashion\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (5, '\\"culture\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (6, '\\"style\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (7, '\\"photo\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (8, '\\"money\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (9, '\\"it\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (10, '\\"science\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (11, '\\"sport\\"');\par
+INSERT INTO `db_news`.`tags` (`id`, `name`) VALUES (12, '\\"weather\\"');\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`tags-news`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (1, 9);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (2, 6);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (2, 7);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (3, 8);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (3, 11);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (3, 12);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (4, 11);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (4, 12);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (6, 8);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (7, 12);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (7, 8);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (7, 11);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (8, 1);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (8, 2);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (8, 17);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (8, 18);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (9, 9);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (10, 20);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (10, 19);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (10, 6);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (10, 7);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (10, 9);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 1);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 3);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 2);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 4);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 5);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 9);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (11, 10);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (12, 15);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (12, 16);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (12, 13);\par
+INSERT INTO `db_news`.`tags-news` (`id_tag`, `id_news`) VALUES (12, 14);\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`tags-review`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (1, 1);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (2, 4);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (11, 2);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (11, 3);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (11, 6);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (10, 5);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (9, 1);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (8, 7);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (7, 7);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (7, 2);\par
+INSERT INTO `db_news`.`tags-review` (`id_tag`, `id_review`) VALUES (7, 3);\par
+\par
+COMMIT;\par
+\par
+\par
+-- -----------------------------------------------------\par
+-- Data for table `db_news`.`news-review`\par
+-- -----------------------------------------------------\par
+START TRANSACTION;\par
+USE `db_news`;\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (1, 2);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (1, 2);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (2, 1);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (2, 2);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (4, 6);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (4, 7);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (6, 10);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (5, 19);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (5, 20);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (3, 2);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (3, 1);\par
+INSERT INTO `db_news`.`news-review` (`id-review`, `id-news`) VALUES (7, 8);\par
+\par
+COMMIT;\par
+\par
+}
+ 

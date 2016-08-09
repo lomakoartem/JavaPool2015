@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<taglib version="2.1"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>ctg</short-name>
+    <tag>
+        <name>bill</name>
+        <tag-class>ua.epam.web.tag.BillTag</tag-class>
+        <attribute>
+            <name>order</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>ua.epam.entities.Order</type></attribute>
+    </tag>
+    <tag>
+        <name>classChoose</name>
+        <tag-class>ua.epam.web.tag.RoomClassChoose</tag-class>
+    </tag>
+</taglib>
